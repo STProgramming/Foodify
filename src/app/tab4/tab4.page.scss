@@ -1,0 +1,67 @@
+.bg{
+    background-color: rgb(126, 15, 15);
+}
+
+.hero-image {
+    background-image: url("../../assets/icon/2.jpg");
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    border-radius: 30px;
+
+    @media(min-width: 400px){
+        background-position: auto;
+    }
+
+    .welcoming{
+        position: absolute;
+        top: 22%;
+        left: 11%;
+        width: auto;
+
+        @media(min-width: 576px){
+            left: 30%;            
+            width: 40%;
+        }
+
+        @media(min-width: 978px){
+            width: 30%;
+        }
+
+        h2, h5{
+            color: white;
+            text-shadow: 5px 5px 10px #000000;
+        }
+
+        h2{
+            font-size: 50px;
+            padding-bottom: 14px;
+        }
+
+        h5{
+            font-size: 30px;
+            line-height: 35px;
+
+            span{
+                color: #4ae54a;
+            }
+        }
+    }
+    
+    .button-show{
+        position: fixed;
+        bottom: 90px;
+
+        ion-button{
+            border-radius: 10px;
+            width: auto;
+            height: 40px;
+
+            @media(min-width: 576px){
+                width: 250px;
+            }
+        }
+    }
+}

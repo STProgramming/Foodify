@@ -1,0 +1,11 @@
+<ion-content>
+  <div class="container">
+    <ion-card>
+      <img src="{{prodetail.imagepath}}" alt="">
+      <h2>{{prodetail.name}}</h2>
+      <h6>{{prodetail.price}}</h6>
+      <p>{{prodetail.description}}</p>
+      <ion-button (click)="addCart(prodetail)">Aggiungi al carrello</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

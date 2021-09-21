@@ -1,0 +1,36 @@
+  <ion-content [fullscreen]="true">
+    <div class="bg">
+      <div class="rouded-layout">
+        <div class="container">
+          <div class="body">
+            <div class="header">
+              <img src="../../assets/icon/logo2.png" alt="">
+              <h4 class="text-center mb-4 mt-5">{{logstatus}}</h4>
+            </div>
+            <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+              <div *ngIf="isLogged == false" >
+                <div class="mb-4 mt-4">
+                  <ion-label>Inserisci il tuo username:</ion-label>
+                  <ion-item>
+                    <ion-input formControlName="username"></ion-input>
+                  </ion-item>
+                </div>
+                <div class="mb-4 mt-4">
+                  <ion-label>Inserisci il tua password:</ion-label>
+                  <ion-item>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                  </ion-item>
+                </div>
+                <div class="mt-4">
+                  <ion-button color="danger" type="submit" expand="block">Accedi</ion-button>
+                </div>
+              </div>
+              <div *ngIf="isLogged == true">
+                <ion-button color="danger" (click)="OnLogOut()" expand="block">Log Out</ion-button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</ion-content>

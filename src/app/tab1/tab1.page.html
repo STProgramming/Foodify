@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="bg">
+    <div class="rounded-layout">
+      <div class="container">
+        <div class="body">
+          <div class="header">
+            <img src="../../assets/icon/logo1.png"/>
+            <h2>Foodify</h2>
+            <h6>Ordina il cibo dove e quando vuoi</h6>
+            <ion-searchbar placeholder="Cerca" style="padding: 0; margin: 30px; width: 200px;"></ion-searchbar>
+          </div>
+          <section class="mt-4">
+            <h4 class="text-center mt-4">Le migliori offerte! Vicino la tua città</h4>
+            <ion-slides>
+              <div *ngFor="let p of products">
+                <ion-slide>
+                  <ion-card (click)="detailView(p.id)">
+                    <img class="image-card" src="{{p.imagepath}}"/>
+                  </ion-card>
+                </ion-slide>
+              </div>
+            </ion-slides>
+          </section>        
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
