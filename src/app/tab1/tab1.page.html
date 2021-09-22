@@ -10,16 +10,18 @@
             <ion-searchbar placeholder="Cerca" style="padding: 0; margin: 30px; width: 200px;"></ion-searchbar>
           </div>
           <section class="mt-4">
-            <h4 class="text-center mt-4">Le migliori offerte! Vicino la tua città</h4>
-            <ion-slides>
-              <div *ngFor="let p of products">
-                <ion-slide>
-                  <ion-card (click)="detailView(p.id)">
-                    <img class="image-card" src="{{p.imagepath}}"/>
-                  </ion-card>
-                </ion-slide>
+            <h4 class="text-center mt-4 mb-4">Scegli il tuo cibo preferito</h4>
+              <div class="container-list">
+                <div *ngFor="let p of products">
+                  <div class="card-product">
+                    <div (click)="detailView(p.id)">
+                      <img class="image-card" src="{{p.imagepath}}"/>
+                      <h4>{{p.name}}</h4>
+                      <h6>{{p.price}} €</h6>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </ion-slides>
           </section>        
         </div>
       </div>

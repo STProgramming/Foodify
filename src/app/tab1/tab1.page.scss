@@ -47,17 +47,74 @@
         margin: 20px;
 
         h4{
+            color: rgb(172, 33, 33);
             font-weight: bold;
+            text-shadow: 0 0 10px rgb(180, 180, 180);
         }
 
-        ion-slides{
-            display: block;
-            overflow-x: visible;
+        .container-list{
+            max-width: 1700px;
+            display: flex;
+            overflow-x: auto;
 
-            .image-card{
+            .card-product{
+                position: relative;
+                width: 300px;
+                min-height: 300px;
+                margin: 30px;
+                background-color: #e7e7e7bb;
+                padding: 16px;
                 border-radius: 50px;
-                width: 400px;
-                height: 310px;
+                text-align: center;
+
+                &:hover{
+
+                    img{
+                        transform: scale(1.05);
+                        top: -3%;
+                        left: 7%;
+                    }
+
+                    h4{
+                        color: white;
+                    }
+
+                    h6{
+                        color: white;
+                    }
+                }
+
+                img{
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 200px;
+                    min-width: 260px;
+                    border-radius: 400px;
+                    box-shadow: 0px 10px 28px rgba(102, 102, 102, 0.733);
+                    transition: 0.4s ease;
+                }
+
+                h4{
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 40px;
+                    color: rgb(83, 60, 60);
+                    transition: 0.4s ease;
+                }
+
+                h6{
+                    position: absolute;
+                    top: 93%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 28px;
+                    color: rgb(83, 60, 60);
+                    transition: 0.4s ease;
+                }
             }
         }
     }

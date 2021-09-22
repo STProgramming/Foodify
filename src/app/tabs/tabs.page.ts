@@ -13,7 +13,6 @@ import { Tab3Page } from '../tab3/tab3.page';
 export class TabsPage implements OnInit {
   auth;
   cartItemCount: BehaviorSubject<number>;
-  
   constructor(private guard: AuthGuard, private router: Router, private cartService: CartService) {}
 
   ngOnInit(){

@@ -53,15 +53,7 @@
     .button-show{
         position: fixed;
         bottom: 90px;
-
-        ion-button{
-            border-radius: 10px;
-            width: auto;
-            height: 40px;
-
-            @media(min-width: 576px){
-                width: 250px;
-            }
-        }
+        left: 0;
+        transform: translate(calc(50vw - 50%));
     }
 }

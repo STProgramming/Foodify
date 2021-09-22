@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AuthGuard implements CanLoad {
   auth;
   constructor(private router: Router){ }
-  
+
   canLoad() {
     const isAuthenticated = !!(+localStorage.getItem('authenticated'));
     if (isAuthenticated){

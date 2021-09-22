@@ -6,12 +6,12 @@ import { NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page implements OnInit {
   products = [];
 
-  constructor(private cartService: CartService, private router: Router) { }
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     this.products = this.cartService.getProducts();
@@ -24,8 +24,8 @@ export class Tab1Page implements OnInit {
   detailView(id: string) {
     const navigationExtras: NavigationExtras = {
       queryParams: {
-        id: JSON.stringify(id)
-      }
+        id: JSON.stringify(id),
+      },
     };
     this.router.navigate(['/tabs/tab5'], navigationExtras);
   }

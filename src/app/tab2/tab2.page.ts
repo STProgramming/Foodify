@@ -26,7 +26,7 @@ export class Tab2Page implements OnInit{
     this.cartService.addProduct(product);
   }
 
-  remoteCartItem(product){
+  removeCartItem(product){
     this.cartService.removeProduct(product);
   }
 
