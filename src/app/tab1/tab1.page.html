@@ -7,12 +7,12 @@
             <img src="../../assets/icon/logo1.png"/>
             <h2>Foodify</h2>
             <h6>Ordina il cibo dove e quando vuoi</h6>
-            <ion-searchbar placeholder="Cerca" style="padding: 0; margin: 30px; width: 200px;"></ion-searchbar>
+            <ion-searchbar placeholder="Cerca" style="padding: 0; margin: 30px; width: 200px;" [(ngModel)]="searchTerm"></ion-searchbar>
           </div>
           <section class="mt-4">
             <h4 class="text-center mt-4 mb-4">Scegli il tuo cibo preferito</h4>
               <div class="container-list">
-                <div *ngFor="let p of products">
+                <div *ngFor="let p of products | filter: searchTerm">
                   <div class="card-product">
                     <div (click)="detailView(p.id)">
                       <img class="image-card" src="{{p.imagepath}}"/>

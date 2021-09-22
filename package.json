@@ -29,6 +29,7 @@
     "bootstrap": "^5.1.1",
     "cordova": "^10.0.0",
     "ionic": "^5.4.16",
+    "ng2-search-filter": "^0.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

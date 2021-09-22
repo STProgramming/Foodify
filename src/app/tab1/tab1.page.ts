@@ -10,6 +10,7 @@ import { NavigationExtras } from '@angular/router';
 })
 export class Tab1Page implements OnInit {
   products = [];
+  searchTerm: string;
 
   constructor(private cartService: CartService, private router: Router) {}
 
