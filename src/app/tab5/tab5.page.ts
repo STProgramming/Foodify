@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CartService, Product } from '../services/cart.service';
 
 @Component({
@@ -8,19 +8,19 @@ import { CartService, Product } from '../services/cart.service';
   styleUrls: ['./tab5.page.scss'],
 })
 export class Tab5Page implements OnInit {
-
   prodetail: Product;
   id: any;
   constructor(
     private router: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private route: Router
   ) {
-      this.router.queryParams.subscribe((params) => {
-        if (params && params.id) {
-          this.id = JSON.parse(params.id);
-          if(this.id !== params || params.id) {
-            this.ngOnInit();
-          }
+    this.router.queryParams.subscribe((params) => {
+      if (params && params.id) {
+        this.id = JSON.parse(params.id);
+        if (this.id !== params || params.id) {
+          this.ngOnInit();
+        }
       }
     });
   }
@@ -33,4 +33,7 @@ export class Tab5Page implements OnInit {
     this.cartService.addProduct(product);
   }
 
+  redirectToHome() {
+    this.route.navigateByUrl('tabs/tab1');
+  }
 }

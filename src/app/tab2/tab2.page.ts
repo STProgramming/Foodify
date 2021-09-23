@@ -43,6 +43,6 @@ export class Tab2Page implements OnInit {
 
   async checkOut(){
     const total = this.getTotal();
-    window.alert('il totale e\' di '+ total +' EUR');
+    window.alert('il totale e\' di '+ total +' €');
   }
 }

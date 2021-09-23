@@ -10,10 +10,37 @@
     height: 100vh;
     border-radius: 30px;
 
+    #backpositioning{
+        width: 30px;
+        height: 30px;
+        padding: 50px 0 0 50px;
+    }
+
     #decoration-item{
         border-radius: 30px;
         box-shadow: 0 0 10px black;
         margin: 30px;
+    }
+
+    #sadcart{
+        height: 246px;
+        width: 293px;
+        border-radius: 0;
+    }
+
+    .centering{
+        margin: 0 auto;
+    }
+
+    table{
+        min-width: 100%;
+    }
+
+    tr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px
     }
 
     img{

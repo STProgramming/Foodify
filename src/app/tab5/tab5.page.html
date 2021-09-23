@@ -3,13 +3,18 @@
     <div class="rounded-layout">
       <div class="container">
         <div class="body">
+          <div class="row">
+            <ion-icon id="backpositioning" (click)="redirectToHome()" name="chevron-back-outline"></ion-icon>
+          </div>
           <div class="product">
-            <div *ngIf="prodetail" >
+            <div *ngIf="prodetail">
               <img src="{{prodetail.imagepath}}" alt="">
               <h2>{{prodetail.name}}</h2>
               <h4>{{prodetail.price}}€</h4>
               <p>{{prodetail.description}}</p>
-              <ion-button (click)="addCart(prodetail)" color="danger">Aggiungi al carrello!</ion-button>
+              <div class="mt-5">
+                <ion-button (click)="addCart(prodetail)" color="danger">Aggiungi al carrello!</ion-button>
+              </div>
             </div>
           </div>
         </div>
