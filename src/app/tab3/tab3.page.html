@@ -5,30 +5,31 @@
           <div class="body">
             <div class="header">
               <img src="../../assets/icon/logo2.png" alt="">
-              <h2>Foodify</h2>
-              <h4 class="text-center mb-4 mt-5">{{logstatus}}</h4>
+              <h2 class="mb-2 mt-5">Foodify</h2>
+              <h4 class="text-center mb-2 mt-2">{{logstatus}}</h4>
+              <div class="border-bottom"></div>
             </div>
-            <div class="col-6 centering">
+            <div class="w-auto centering">
               <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
                 <div *ngIf="isLogged === false" >
                   <div class="mb-4 mt-4">
                     <ion-label>Inserisci il tuo username:</ion-label>
-                    <ion-item>
-                      <ion-input formControlName="username"></ion-input>
-                    </ion-item>
+                    <ion-input [ngClass]="(statusInput === 1 )? 'status-input':'incorrect-input'" type="text" formControlName="username"></ion-input>
                   </div>
                   <div class="mb-4 mt-4">
                     <ion-label>Inserisci il tua password:</ion-label>
-                    <ion-item>
-                      <ion-input type="password" formControlName="password"></ion-input>
-                    </ion-item>
+                    <ion-input [ngClass]="(statusInput === 1 )? 'status-input':'incorrect-input'" type="password" formControlName="password"></ion-input>
                   </div>
-                  <div class="mt-5">
-                    <ion-button color="danger" type="submit" expand="block">Accedi</ion-button>
+                  <div class="mt-5 mt-sm-2">
+                    <div type="submit" (click)="onSubmit()" id="button-custom">
+                      <h4>Accedi</h4>
+                    </div>
                   </div>
                 </div>
-                <div class="mt-5" *ngIf="isLogged === true">
-                  <ion-button color="danger" (click)="onLogOut()" expand="block">Log Out</ion-button>
+                <div class="mt-5 mt-sm-2" *ngIf="isLogged === true">
+                  <div type="submit" (click)="onLogOut()" id="button-custom">
+                    <h4>Log out</h4>
+                  </div>
                 </div>
               </form>
             </div>

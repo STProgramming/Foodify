@@ -13,8 +13,9 @@ export class Tab3Page implements OnInit {
   submitted = false;
   correctUsername = 'administrator';
   correcPassword = 'password';
-
+  statusInput: number;
   public myForm: FormGroup;
+  
 
   constructor(private router: Router) {}
 
@@ -24,6 +25,7 @@ export class Tab3Page implements OnInit {
       password: new FormControl(),
     });
     this.logstatus = 'Log in';
+    this.statusInput = 1;
     localStorage.setItem('authenticated', '0');
   }
 
@@ -35,9 +37,16 @@ export class Tab3Page implements OnInit {
     ) {
       localStorage.setItem('authenticated', '1');
       this.isLogged = true;
+      this.statusInput = 1;
       this.logstatus = 'Log out';
       this.router.navigateByUrl('tabs/tab1');
     } else {
+      let username = this.myForm.value.username;
+      let password = this.myForm.value.password;
+      if(username == '' || !(username == this.correctUsername) || password == '' || !(password == this.correcPassword))
+      {
+        this.statusInput = 0;
+      }
       localStorage.setItem('authenticated', '0');
       this.isLogged = false;
     }

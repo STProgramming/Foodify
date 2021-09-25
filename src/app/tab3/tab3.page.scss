@@ -17,17 +17,13 @@
     box-shadow: 0px 10px 28px #BBBB;
 
     h2{
-        position: absolute;
         font-weight: bold;
         text-shadow: 0 0 10px rgba(243, 243, 243, 0.473);
-        top: 344px;
         color: #eb445a;
     }
 
     h4{
-        position: absolute;
         font-weight: bold;
-        bottom: -10px;
     }
 
     img{
@@ -37,6 +33,14 @@
         margin: 0 auto;
         border-radius: 85px;
         box-shadow: 5px 5px 28px #b9b9b9;
+    }
+
+    .border-bottom{
+        background-color: #eb445a;
+        width: 90px;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -52,5 +56,25 @@
     form {
         padding: 30px 30px 0 30px;
 
+        #button-custom{
+            background-color: #cf3c4f;
+            border-radius: 30px;
+            width: 50%;
+            padding: 10px;
+            margin: 0 auto;
+    
+            h4{
+                text-align: center;
+                color: white;
+            }
+        }       
+
+        .status-input{
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .incorrect-input{
+            border-bottom: 1px solid red;
+        }
     }
 }
