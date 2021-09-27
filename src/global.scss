@@ -25,3 +25,53 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 @import "bootstrap";
+
+.searchbar-input.sc-ion-searchbar-md {
+    border-radius: 50px;
+    background-position: left 8px center;
+    height: auto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #7f8490;
+    background-color: #eceaeb;
+    -webkit-box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1) !important;
+}
+
+#button-custom{
+    position: fixed;
+    background-color: #cf3c4f;
+    bottom: 90px;
+    left: 0;
+    transform: translate(calc(50vw - 50%));
+    border-radius: 30px;
+    width: 50%;
+    padding: 10px;
+    transition: 0.15s ease;
+
+    @media(min-width: 530px){
+        width: 300px;
+    }
+
+    h4{
+        text-align: center;
+        color: white;
+        transition: 0.15s ease;
+    }
+
+    &:active{
+        background-color: white;
+
+        h4{
+            color: #cf3c4f;
+        }
+    }
+} 
+
+.toast-custom-class {
+    --color:#ffffff;
+    --border: none;
+    --border-radius:50px;    
+    --background:#cf3c4f;
+    --button-color:#ffffff;
+}

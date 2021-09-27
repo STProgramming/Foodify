@@ -1,5 +1,5 @@
 <ion-tabs>
-  <ion-tab-bar *ngIf="checkLogin()" slot="bottom">
+  <ion-tab-bar class="my-custom-tab-bar" *ngIf="checkLogin()" slot="bottom">
     <ion-tab-button tab="tab1">
       <ion-icon name="home-outline"></ion-icon>
       <ion-label>Home</ion-label>
@@ -7,7 +7,7 @@
 
     <ion-tab-button tab="tab2">
       <ion-icon name="cart-outline"></ion-icon>
-      <ion-badge color="primary">{{cartItemCount | async}}</ion-badge>
+      <ion-badge>{{cartItemCount | async}}</ion-badge>
       <ion-label>Carrello</ion-label>
     </ion-tab-button>
 

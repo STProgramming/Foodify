@@ -11,9 +11,10 @@
               <img src="{{prodetail.imagepath}}" alt="">
               <h2>{{prodetail.name}}</h2>
               <h4>{{prodetail.price}}€</h4>
+              <h5><b>Descrizione prodotto</b></h5>
               <p>{{prodetail.description}}</p>
-              <div class="mt-5">
-                <ion-button (click)="addCart(prodetail)" color="danger">Aggiungi al carrello!</ion-button>
+              <div id="button-custom" (click)="addCart(prodetail)">
+                <h4>Aggiungi al carrello</h4>
               </div>
             </div>
           </div>

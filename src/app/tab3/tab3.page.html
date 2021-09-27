@@ -11,14 +11,16 @@
             </div>
             <div class="w-auto centering">
               <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-                <div *ngIf="isLogged === false" >
+                <div *ngIf="isLogged === false">
                   <div class="mb-4 mt-4">
-                    <ion-label>Inserisci il tuo username:</ion-label>
-                    <ion-input [ngClass]="(statusInput === 1 )? 'status-input':'incorrect-input'" type="text" formControlName="username"></ion-input>
+                    <h6 class="text-danger" *ngIf="incorrectUsername">L'username inserito non e' corretto</h6>                     
+                    <ion-label>Inserisci il tuo username</ion-label>
+                    <ion-input [ngClass]="(statusUsername === 1 )? 'status-input':'incorrect-input'" type="text" formControlName="username"></ion-input>
                   </div>
                   <div class="mb-4 mt-4">
-                    <ion-label>Inserisci il tua password:</ion-label>
-                    <ion-input [ngClass]="(statusInput === 1 )? 'status-input':'incorrect-input'" type="password" formControlName="password"></ion-input>
+                    <h6 class="text-danger" *ngIf="incorrectPassword">La password inserita non e' corretta</h6>                     
+                    <ion-label>Inserisci il tua password</ion-label>
+                    <ion-input [ngClass]="(statusPassword === 1 )? 'status-input':'incorrect-input'" type="password" formControlName="password"></ion-input>
                   </div>
                   <div class="mt-5 mt-sm-2">
                     <div type="submit" (click)="onSubmit()" id="button-custom">

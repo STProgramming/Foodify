@@ -18,10 +18,6 @@ export class Tab1Page implements OnInit {
     this.products = this.cartService.getProducts();
   }
 
-  addToCart(product) {
-    this.cartService.addProduct(product);
-  }
-
   detailView(id: string) {
     const navigationExtras: NavigationExtras = {
       queryParams: {

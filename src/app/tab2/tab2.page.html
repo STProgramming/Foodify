@@ -3,43 +3,39 @@
     <div class="rounded-layout">
       <div class="container">   
         <div class="body">
-          <div class="row">
-            <ion-icon id="backpositioning" (click)="redirectToHome()" name="chevron-back-outline"></ion-icon>
-          </div>
-          <div class="col-8 centering">
-            <ion-item id="decoration-item" *ngFor="let prod of cart">
-              <table>
-                <tr>
-                  <th>
-                    <img src="{{prod.imagepath}}" alt="">  
-                  </th>
-                  <th>{{prod.name}}</th>
-                  <th>{{prod.price}}€</th>
-                </tr>
-                <tr>
-                  <th>Quantità: {{prod.amount}}</th>
-                  <th>
-                    <ion-button (click)="increaseCartItem(prod)">
-                      <ion-icon name="add-outline"></ion-icon>
-                    </ion-button>
-                  </th>
-                  <th>
-                    <ion-button (click)="decreaseCartItem(prod)">
-                      <ion-icon name="remove-outline"></ion-icon>
-                    </ion-button>
-                  </th>
-                  <th>
-                    <ion-button (click)="removeCartItem(prod)">
-                      <ion-icon name="close-outline"></ion-icon>
-                    </ion-button>
-                  </th>
-                </tr>
-              </table>
-            </ion-item>
-            <div *ngIf="cart.length !== 0">
-              <ion-button (click)="checkOut()" color="danger" expand="block">Checkout</ion-button>         
+          <div class="row mb-5">
+            <div class="col-sm-4 col-4">
+              <ion-icon id="backpositioning" (click)="redirectToHome()" name="chevron-back-outline"></ion-icon>
             </div>
-            <div *ngIf="cart.length === 0">
+            <div class="col-sm-4 col-4">
+              <h6 class="text-center" style="padding-top: 50px; margin-top: 6px;"><b>Carrello</b></h6>
+            </div>
+          </div>
+          <div class="col-11 centering">
+            <div class="cart-object" *ngFor="let prod of cart">
+              <div class="content">
+                <div class="info-object">
+                  <img src="{{prod.imagepath}}" alt="">
+                  <div class="info">
+                    <h3><b>{{prod.name}}</b></h3>
+                    <h6><b>{{prod.price | currency:'EUR'}}</b></h6>
+                  </div>
+                </div>
+                <div class="amount">
+                  <div class="selector">
+                    <a type="button" (click)="increaseCartItem(prod)"><img src="../../assets/icon/add-outline.svg" alt=""></a>
+                    <p>{{prod.amount}}</p>
+                    <a type="button" (click)="decreaseCartItem(prod)"><img src="../../assets/icon/remove-outline.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="cart.length !== 0">
+              <div id="button-custom" (click)="checkOut()">
+                <h4>Checkout {{getTotal()|currency:'EUR'}}</h4>
+              </div>         
+            </div>
+            <div class="mt-5" *ngIf="cart.length === 0">
               <div class="container text-center">
                 <img id="sadcart" src="../../assets/icon/sad-cart_Tavola disegno 1.png" />
                 <h1>Al momento non hai nulla nel carrello</h1>

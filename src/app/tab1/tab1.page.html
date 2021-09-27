@@ -4,13 +4,14 @@
       <div class="container">
         <div class="body">
           <div class="header">
-            <img src="../../assets/icon/logo1.png"/>
+            <img src="../../assets/icon/logo2.png"/>
             <h2>Foodify</h2>
             <h6>Ordina il cibo dove e quando vuoi</h6>
-            <ion-searchbar placeholder="Cerca" style="padding: 0; margin: 30px; width: 200px;" [(ngModel)]="searchTerm"></ion-searchbar>
+            <ion-searchbar id="searchbar" placeholder="Cerca" [(ngModel)]="searchTerm"></ion-searchbar>
           </div>
           <section class="mt-4">
-            <h4 class="text-center mt-4 mb-4">Scegli il tuo cibo preferito</h4>
+            <h4 class="text-center mt-4">Scegli il tuo cibo preferito</h4>
+            <div class="border-bottom"></div>
               <div class="container-list">
                 <div *ngFor="let p of products | filter: searchTerm">
                   <div class="card-product">

@@ -10,9 +10,20 @@
     position: relative;
     background-position: center;
     border-radius: 30px;
+    animation-name: imgsliding;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
 
-    @media(min-width: 400px){
-        background-position: auto;
+    @keyframes imgsliding{
+        0% {background-position-x: 0px;}
+        50% {background-position-x: -628px;}
+        100% {background-position-x: 0px;}
+    }
+
+    @media(min-width: 992px){
+        animation-name: none;
+        animation-duration: none;
+        animation-iteration-count: none;
     }
 
     .welcoming{
@@ -31,13 +42,12 @@
         }
 
         img{
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             display: block;
-            margin: 0 auto;
+            margin-bottom: 50px;
             border-radius: 85px;
             box-shadow: 5px 5px 28px #b9b9b9;
-            margin-bottom: 10px;
         }
 
         h2, h5{
@@ -57,26 +67,6 @@
             span{
                 color: #4ae54a;
             }
-        }
-    }
-    
-    #button-custom{
-        position: fixed;
-        background-color: #cf3c4f;
-        bottom: 90px;
-        left: 0;
-        transform: translate(calc(50vw - 50%));
-        border-radius: 30px;
-        width: 50%;
-        padding: 10px;
-
-        @media(min-width: 530px){
-            width: 300px;
-        }
-
-        h4{
-            text-align: center;
-            color: white;
         }
     }
 }
