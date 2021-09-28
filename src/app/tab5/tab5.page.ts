@@ -44,7 +44,7 @@ export class Tab5Page implements OnInit {
     const prod: Product = product;
     const toast = await this.toastController.create({
       header: 'Prodotto aggiunto al carrello',
-      message: 'Hai stato aggiunto ' +prod.name + ' al carrello',
+      message: 'E\' stato aggiunto ' +prod.name + ' al carrello',
       position: 'middle',
       cssClass: 'toast-custom-class',
       buttons: [
