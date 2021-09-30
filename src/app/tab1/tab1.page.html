@@ -6,18 +6,18 @@
           <div class="header">
             <img src="../../assets/icon/logo2.png"/>
             <h2>Foodify</h2>
-            <h6>Ordina il cibo dove e quando vuoi</h6>
-            <ion-searchbar id="searchbar" placeholder="Cerca" [(ngModel)]="searchTerm"></ion-searchbar>
+            <h6>{{ 'HOME.motto' | translate }}</h6>
+            <ion-searchbar id="searchbar" placeholder="{{ 'HOME.pl-search' | translate}}" [(ngModel)]="searchTerm"></ion-searchbar>
           </div>
           <section class="mt-4">
-            <h4 class="text-center mt-4">Scegli il tuo cibo preferito</h4>
+            <h4 class="text-center mt-4">{{ 'HOME.select' | translate }}</h4>
             <div class="border-bottom"></div>
               <div class="container-list">
                 <div *ngFor="let p of products | filter: searchTerm">
                   <div class="card-product">
                     <div (click)="detailView(p.id)">
                       <img class="image-card" src="{{p.imagepath}}"/>
-                      <h4>{{p.name}}</h4>
+                      <h4>{{p.name|translate}}</h4>
                       <h6>{{p.price}} €</h6>
                     </div>
                   </div>

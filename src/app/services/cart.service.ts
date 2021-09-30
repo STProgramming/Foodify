@@ -15,14 +15,14 @@ export interface Product {
 })
 export class CartService {
   data: Product[] = [
-    {id: 1, name: 'Pizza', price: 5.99, imagepath: '../../assets/icon/pizza.jpg', amount: 1, description: 'La miglior pizza! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 2, name: 'Sushi', price: 10.45, imagepath: '../../assets/icon/sushi.jpg', amount: 1, description: 'Il miglior sushi! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 3, name: 'Pasta', price: 7.17, imagepath: '../../assets/icon/pasta.jpg', amount: 1, description: 'La miglior pasta! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 4, name: 'Carne', price: 15.36, imagepath: '../../assets/icon/carne.jpg', amount: 1, description: 'I migliori tagli di carne! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 5, name: 'Pesce', price: 20.69, imagepath: '../../assets/icon/pesce.jpg', amount: 1, description: 'Le migliori ricette di pesce! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 6, name: 'Vegano', price: 10.99, imagepath: '../../assets/icon/vegano.jpg', amount: 1, description: 'I migliori piatti vegani! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 7, name: 'Indiano', price: 20.99, imagepath: '../../assets/icon/indiano.jpg', amount: 1, description: 'Il miglior cibo indiano! Direttamente dai nostri locali di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'},
-    {id: 8, name: 'Hamburger', price: 6.99, imagepath: '../../assets/icon/hamburger.jpg', amount: 1, description: 'I migliori Hamburgers! Direttamente dalle nostre paninoteche di fiducia della tua citta\'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.'}
+    {id: 1, name: 'Pizza', price: 5.99, imagepath: '../../assets/icon/pizza.jpg', amount: 1, description: 'DESCRIPTION_PIZZA'},
+    {id: 2, name: 'Sushi', price: 10.45, imagepath: '../../assets/icon/sushi.jpg', amount: 1, description: 'DESCRIPTION_SUSHI'},
+    {id: 3, name: 'Pasta', price: 7.17, imagepath: '../../assets/icon/pasta.jpg', amount: 1, description: 'DESCRIPTION_PASTA'},
+    {id: 4, name: 'MEAT', price: 15.36, imagepath: '../../assets/icon/carne.jpg', amount: 1, description: 'DESCRIPTION_MEAT'},
+    {id: 5, name: 'FISH', price: 20.69, imagepath: '../../assets/icon/pesce.jpg', amount: 1, description: 'DESCRIPTION_FISH'},
+    {id: 6, name: 'VEGAN', price: 10.99, imagepath: '../../assets/icon/vegano.jpg', amount: 1, description: 'DESCRIPTION_VEGAN'},
+    {id: 7, name: 'INDIAN', price: 20.99, imagepath: '../../assets/icon/indiano.jpg', amount: 1, description: 'DESCRIPTION_INDIAN'},
+    {id: 8, name: 'Hamburger', price: 6.99, imagepath: '../../assets/icon/hamburger.jpg', amount: 1, description: 'DESCRIPTION_HAMBURGER'}
   ];
 
   private cart=[];

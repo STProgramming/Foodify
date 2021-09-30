@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService, Product } from '../services/cart.service';
 import { ToastController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tab5',
@@ -15,7 +16,8 @@ export class Tab5Page implements OnInit {
     private router: ActivatedRoute,
     private cartService: CartService,
     private route: Router,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private translate: TranslateService
   ) {
     this.router.queryParams.subscribe((params) => {
       if (params && params.id) {
@@ -41,10 +43,13 @@ export class Tab5Page implements OnInit {
   }
 
   async presentToastWithOptions(product) {
+    const headerTranslate: string = this.translate.instant('TOAST.title');
+    const paragraphTranslate: string = this.translate.instant('TOAST.paragraph');
     const prod: Product = product;
+    const prodNameTranlate: string = this.translate.instant(prod.name);
     const toast = await this.toastController.create({
-      header: 'Prodotto aggiunto al carrello',
-      message: 'E\' stato aggiunto ' +prod.name + ' al carrello',
+      header: headerTranslate,
+      message: paragraphTranslate + prodNameTranlate,
       position: 'middle',
       cssClass: 'toast-custom-class',
       buttons: [

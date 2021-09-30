@@ -13,18 +13,18 @@
               <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
                 <div *ngIf="isLogged === false">
                   <div class="mb-4 mt-4">
-                    <h6 class="text-danger" *ngIf="incorrectUsername">L'username inserito non e' corretto</h6>                     
-                    <ion-label>Inserisci il tuo username</ion-label>
+                    <h6 class="text-danger" *ngIf="incorrectUsername">{{'ALERT_LOGIN_PAGE.alert_username'|translate}}</h6>                     
+                    <ion-label>{{'LOGIN_PAGE.username'|translate}}</ion-label>
                     <ion-input [ngClass]="(statusUsername === 1 )? 'status-input':'incorrect-input'" type="text" formControlName="username"></ion-input>
                   </div>
                   <div class="mb-4 mt-4">
-                    <h6 class="text-danger" *ngIf="incorrectPassword">La password inserita non e' corretta</h6>                     
-                    <ion-label>Inserisci il tua password</ion-label>
+                    <h6 class="text-danger" *ngIf="incorrectPassword">{{'ALERT_LOGIN_PAGE.alert_password'|translate}}</h6>                     
+                    <ion-label>{{'LOGIN_PAGE.password'|translate}}</ion-label>
                     <ion-input [ngClass]="(statusPassword === 1 )? 'status-input':'incorrect-input'" type="password" formControlName="password"></ion-input>
                   </div>
                   <div class="mt-5 mt-sm-2">
                     <div type="submit" (click)="onSubmit()" id="button-custom">
-                      <h4>Accedi</h4>
+                      <h4>{{'LOGIN_PAGE.button'|translate}}</h4>
                     </div>
                   </div>
                 </div>

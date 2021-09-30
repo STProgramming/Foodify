@@ -8,7 +8,7 @@
               <ion-icon id="backpositioning" (click)="redirectToHome()" name="chevron-back-outline"></ion-icon>
             </div>
             <div class="col-sm-4 col-4">
-              <h6 class="text-center" style="padding-top: 50px; margin-top: 6px;"><b>Carrello</b></h6>
+              <h6 class="text-center" style="padding-top: 50px; margin-top: 6px;"><b>{{'CART.title'|translate}}</b></h6>
             </div>
           </div>
           <div class="col-11 centering">
@@ -17,7 +17,7 @@
                 <div class="info-object">
                   <img src="{{prod.imagepath}}" alt="">
                   <div class="info">
-                    <h3><b>{{prod.name}}</b></h3>
+                    <h3><b>{{prod.name|translate}}</b></h3>
                     <h6><b>{{prod.price | currency:'EUR'}}</b></h6>
                   </div>
                 </div>
@@ -38,7 +38,7 @@
             <div class="mt-5" *ngIf="cart.length === 0">
               <div class="container text-center">
                 <img id="sadcart" src="../../assets/icon/sad-cart_Tavola disegno 1.png" />
-                <h1>Al momento non hai nulla nel carrello</h1>
+                <h1>{{'CART.alert'|translate}}</h1>
               </div>
             </div>
           </div>

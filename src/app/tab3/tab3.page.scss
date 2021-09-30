@@ -27,13 +27,18 @@
     }
 
     img{
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         display: block;
         margin: 0 auto;
         margin-bottom: 10px;
         border-radius: 85px;
         box-shadow: 5px 5px 28px #b9b9b9;
+
+        @media(min-width: 370px) {
+            width: 150px;
+            height: 150px;
+        }
     }
 
     .border-bottom{

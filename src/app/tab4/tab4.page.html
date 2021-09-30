@@ -1,11 +1,16 @@
 <ion-content>
   <div class="bg">
     <div class="container">
+      <div class="layout">
+        <div class="component" (click)="openPopover($event)">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png"/>
+        </div>
+      </div>
       <div class="hero-image">
         <div class="welcoming">
           <img src="../../assets/icon/logo2.png"/>
           <h2>Foodify</h2>
-          <h5>Il servizio di consegna del cibo che ti <span>stupisce</span></h5>
+          <h5>{{'WELCOME.welcoming' | translate}}<span>{{'WELCOME.higher' | translate}}</span></h5>
         </div>
         <div id="button-custom" (click)="redirectLogin()">
           <h4>Log in</h4>

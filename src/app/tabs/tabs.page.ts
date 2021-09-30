@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthGuard } from '../guards/auth.guard';
 import { CartService } from '../services/cart.service';
+import { LanguageService } from '../services/language.service';
 import { Tab3Page } from '../tab3/tab3.page';
 
 @Component({
@@ -16,7 +17,8 @@ export class TabsPage implements OnInit {
   constructor(
     private guard: AuthGuard,
     private router: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private languageService: LanguageService
   ) {}
 
   ngOnInit() {
@@ -27,11 +29,11 @@ export class TabsPage implements OnInit {
   checkLogin(): boolean {
     return (this.router &&
       this.router.url &&
-      this.router.url.includes('tab4')) ||
+      this.router.url.includes('tab4') ||
       this.router.url.includes('tab3') ||
       this.router.url.includes('tab5') ||
       this.router.url.includes('tab2')
       ? false
-      : true;
+      : true);
   }
 }

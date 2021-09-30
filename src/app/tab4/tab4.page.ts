@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PopoverController } from '@ionic/angular';
+import { LanguageSelectorComponent } from '../language-selector/language-selector.component';
 
 @Component({
   selector: 'app-tab4',
@@ -8,12 +10,20 @@ import { Router } from '@angular/router';
 })
 export class Tab4Page implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private popoverCtrl: PopoverController) { }
 
   ngOnInit() {
   }
 
   redirectLogin(){
     this.router.navigateByUrl('tabs/tab3');
+  }
+
+  async openPopover(ev: any) {
+    const modal = await this.popoverCtrl.create({
+      component: LanguageSelectorComponent,
+      cssClass: 'pop-over-custom',
+    });
+    await modal.present();
   }
 }

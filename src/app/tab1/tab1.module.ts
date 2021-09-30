@@ -6,6 +6,7 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    TranslateModule
   ],
   declarations: [Tab1Page]
 })

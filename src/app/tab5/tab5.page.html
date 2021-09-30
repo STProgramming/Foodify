@@ -9,12 +9,12 @@
           <div class="product">
             <div *ngIf="prodetail">
               <img src="{{prodetail.imagepath}}" alt="">
-              <h2>{{prodetail.name}}</h2>
+              <h2>{{prodetail.name | translate}}</h2>
               <h4>{{prodetail.price}}€</h4>
-              <h5><b>Descrizione prodotto</b></h5>
-              <p>{{prodetail.description}}</p>
+              <h5><b>{{'DETAIL.description' | translate}}</b></h5>
+              <p>{{prodetail.description | translate}}</p>
               <div id="button-custom" (click)="addCart(prodetail)">
-                <h4>Aggiungi al carrello</h4>
+                <h4>{{'DETAIL.button' | translate}}</h4>
               </div>
             </div>
           </div>
