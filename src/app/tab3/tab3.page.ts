@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tab3',
@@ -12,7 +13,7 @@ export class Tab3Page implements OnInit {
   isLogged = false;
   submitted = false;
   correctUsername = 'administrator';
-  correcPassword = 'password';
+  correctPassword = 'password';
   incorrectUsername: boolean;
   incorrectPassword: boolean;
   statusUsername: number;
@@ -24,8 +25,8 @@ export class Tab3Page implements OnInit {
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      username: new FormControl(),
-      password: new FormControl(),
+      username: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._]+@[a-z]+\.[a-z.]{2,20}$')]),
+      password: new FormControl('', Validators.required)
     });
     this.logstatus = 'Log in';
     this.statusUsername = 1;
@@ -39,7 +40,7 @@ export class Tab3Page implements OnInit {
     this.submitted = true;
     if (
       this.myForm.value.username === this.correctUsername &&
-      this.myForm.value.password === this.correcPassword
+      this.myForm.value.password === this.correctPassword
     ) {
       localStorage.setItem('authenticated', '1');
       this.isLogged = true;
@@ -54,7 +55,7 @@ export class Tab3Page implements OnInit {
         username === '' ||
         !(username === this.correctUsername) ||
         password === '' ||
-        !(password === this.correcPassword)
+        !(password === this.correctPassword)
       ) {
           if (username !== this.correctUsername) {
             this.incorrectUsername = true;
@@ -64,7 +65,7 @@ export class Tab3Page implements OnInit {
             this.incorrectUsername = false;
             this.statusUsername = 1;
           }
-          if (password !== this.correcPassword) {
+          if (password !== this.correctPassword) {
             this.incorrectPassword = true;
             this.statusPassword = 0;
           }

@@ -1,0 +1,16 @@
+<ion-content class="layout-system">
+  <div *ngFor="let language of languages">
+    <ion-button size="large" shape="round" color="danger" (click)="setLang(language.value)">
+      <div class="button-align">
+        <img src="{{language.img}}" alt="">
+        <h6>{{language.text}}</h6>
+      </div>
+    </ion-button>
+  </div>
+  <ion-button size="large" shape="round" color="danger" (click)="close()">
+    <div class="button-align">
+      <ion-icon name="close-outline"></ion-icon>
+      <h6>{{infoClose}}</h6>
+    </div>
+  </ion-button>
+</ion-content>

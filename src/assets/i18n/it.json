@@ -1,0 +1,48 @@
+{
+    "HOME": {
+        "motto": "Ordina il cibo dove e quando vuoi",
+        "select": "Scegli il tuo cibo preferito",
+        "pl-search": "Cerca"
+    },
+    "NAV": {
+        "tab2": "Carrello"
+    },
+    "WELCOME": {
+        "welcoming": "Il servizio di consegna del cibo che ",
+        "higher": "ti stupisce"
+    },
+    "DETAIL": {
+        "description": "Descrizione prodotto",
+        "button": "Aggiungi al carrello"
+    },
+    "MEAT": "Carne",
+    "FISH": "Pesce",
+    "VEGAN": "Vegano",
+    "INDIAN": "Indiano",
+    "DESCRIPTION_PIZZA": "La migliore pizza! Direttamente dalle nostre pizzerie di fiducia della tua citta' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_SUSHI": "Il miglior sushi! Direttamente dai nostri locali di fiducia della tua citta' ! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_PASTA": "La miglior pasta! Direttamente dai nostri locali di fiducia della tua citta'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_MEAT": "I migliori tagli di carne che potrai avere! Dai nostri locali di fiducia della tua citta', direttamente da te con il nostro servizio di spedizione! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_FISH": "Le migliori ricette di pesce! Direttamente dai nostri locali di fiducia della tua citta'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_VEGAN": "I migliori piatti vegani! Direttamente dai nostri locali di fiducia della tua citta'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_INDIAN": "Il miglior cibo indiano! Direttamente dai nostri locali di fiducia della tua citta'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_HAMBURGER": "I migliori Hamburgers! Direttamente dalle nostre paninoteche di fiducia della tua citta'! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "LOGIN_PAGE": {
+        "username": "Inserisci il tuo username",
+        "password": "Inserisci il tua password",
+        "button": "Accedi"
+    },
+    "ALERT_LOGIN_PAGE": {
+        "alert_username": "L'username inserito non e' corretto",
+        "alert_password": "La password inserita non e' corretta"
+    },
+    "CART": {
+        "title": "Carrello",
+        "alert": "Al momento non hai nulla nel carrello"
+    },
+    "TOAST": {
+        "title": "Prodotto aggiunto al carrello",
+        "paragraph": "Hai aggiunto al carrello "
+    },
+    "POPOVER": "Chiudi"
+}

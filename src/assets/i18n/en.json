@@ -1,0 +1,48 @@
+{
+    "HOME": {
+        "motto": "Order food wherever and whenever you want",
+        "select": "Choose your favourite food",
+        "pl-search": "Research"
+    },
+    "NAV": {
+        "tab2": "Cart"
+    },
+    "WELCOME": {
+        "welcoming": "The food delivery service that",
+        "higher": " amazes you"
+    },
+    "DETAIL": {
+        "description": "Product description",
+        "button": "Add to cart"
+    },
+    "MEAT": "Meat",
+    "FISH": "Fish",
+    "VEGAN": "Vegan",
+    "INDIAN": "Indian",
+    "DESCRIPTION_PIZZA": "Only the best pizza! Directly from our trusted pizzeria of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_SUSHI": "Only the best sushi! Directly from our trusted locals of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_PASTA": "Only the best pasta! Directly from our trusted locals of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_MEAT": "Only the best meat you can have! From our trusted locals of your city, directly to you by our delivery service. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_FISH": "Only the best fish's receipt! Directly from our trusted locals of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_VEGAN": "Only the best vegan dishes! Directly from our trusted vegan locals of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_INDIAN": "Only the best indian dishes! Directly from our trusted indian locals of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "DESCRIPTION_HAMBURGER": "  Only the best hamburgers! Directly from our trusted sandwich bars of your city! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+    "LOGIN_PAGE": {
+        "username": "Insert here your username",
+        "password": "Insert here your password",
+        "button": "Log in"
+    },
+    "ALERT_LOGIN_PAGE": {
+        "alert_username": "The username entered is not correct",
+        "alert_password": "The password entered is not correct"
+    },
+    "CART": {
+        "title": "Cart",
+        "alert": "You currently have nothing in your cart"
+    },
+    "TOAST": {
+        "title": "Product added to cart correctly",
+        "paragraph": "You have added to cart "
+    },
+    "POPOVER": "Close"
+}

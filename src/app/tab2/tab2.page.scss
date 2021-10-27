@@ -72,6 +72,10 @@
                     background-color: rgb(172, 33, 33);
                     justify-content: space-evenly;
                     align-items: center;
+
+                    @media(max-width: 330px) {
+                        width: 47px;
+                    }
         
                     a{
                         img {

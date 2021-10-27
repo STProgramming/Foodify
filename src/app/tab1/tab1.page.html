@@ -9,15 +9,15 @@
             <h6>{{ 'HOME.motto' | translate }}</h6>
             <ion-searchbar id="searchbar" placeholder="{{ 'HOME.pl-search' | translate}}" [(ngModel)]="searchTerm"></ion-searchbar>
           </div>
-          <section class="mt-4">
-            <h4 class="text-center mt-4">{{ 'HOME.select' | translate }}</h4>
+          <section>
+            <h4 class="text-center">{{ 'HOME.select' | translate }}</h4>
             <div class="border-bottom"></div>
               <div class="container-list">
                 <div *ngFor="let p of products | filter: searchTerm">
                   <div class="card-product">
                     <div (click)="detailView(p.id)">
                       <img class="image-card" src="{{p.imagepath}}"/>
-                      <h4>{{p.name|translate}}</h4>
+                      <h4 class="product-name">{{p.name|translate}}</h4>
                       <h6>{{p.price}} €</h6>
                     </div>
                   </div>

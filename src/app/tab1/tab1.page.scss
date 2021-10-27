@@ -24,10 +24,20 @@
     h2{
         font-size: 40px;
         padding-bottom: 0;
+
+        @media(max-width: 380px),
+            screen and (max-height: 584px) {
+            font-size: 30px;
+        }
     }
 
     h6{
         font-size: 20px;
+        
+        @media(max-width: 380px),
+            screen and (max-height: 584px) {
+            font-size: 16px;
+        }
     }
 
     img{
@@ -37,15 +47,27 @@
         margin: 0 auto;
         border-radius: 85px;
         box-shadow: 5px 5px 28px #b9b9b9;
+
+        @media(max-width: 380px)
+             and (max-height: 584px) {
+                width: 80px;
+                height: 80px;
+        }
     }
 
     #searchbar{
         width: auto;
         border-radius: 50px;
         margin: 16px;
-
+        
         @media(min-width: 430px){
             width: 300px;
+        }
+
+        @media(max-width: 380px)
+            and (max-height: 584px) {
+            margin: 0;
+            padding: 0;
         }
 
         .searchbar-input-container, .sc-ion-searchbar-md{
@@ -65,7 +87,11 @@
     section{
         margin: 20px;
         margin-bottom: 0;
-        padding-left: 20px;
+        
+        @media(max-width: 380px)
+            and (max-height: 584px) {
+                margin-top: 12px;
+        }
 
         .border-bottom{
             background-color: rgb(172, 33, 33);
@@ -79,7 +105,20 @@
             color: rgb(172, 33, 33);
             font-weight: bold;
             margin-bottom: 10px;
+            font-size: 22px;
+            margin-top: 24px;
             text-shadow: 0 0 10px rgb(180, 180, 180);
+
+            @media(max-width: 380px)
+                and (max-height: 584px) {
+                margin-top: 16px;
+                font-size: 16px;
+            }
+
+            @media(max-width: 330px) {
+                margin-top: 16px;
+                font-size: 16px;
+            }
         }
 
         .container-list{
@@ -89,15 +128,34 @@
 
             .card-product{
                 position: relative;
+                border-radius: 50px;   
+                box-shadow: 0px 10px 28px rgba(102, 102, 102, 0.2);
+                background-color: white;
                 width: 300px;
                 min-height: 300px;
                 margin: 30px;
-                margin-top: 60px;
-                background-color: white;
-                box-shadow: 0px 10px 28px rgba(102, 102, 102, 0.2);
+                margin-top: 60px; 
                 padding: 16px;
-                border-radius: 50px;
                 text-align: center;
+
+                @media(max-width: 380px)
+                    and (max-height: 584px) {
+                    width: 150px;
+                    min-height: 150px;
+                    margin: 30px;
+                    margin-top: 20px;
+                    box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.2);
+                    border-radius: 30px;
+                }
+
+                @media(max-width: 330px) {
+                    width: 150px;
+                    min-height: 150px;
+                    margin: 30px;
+                    margin-top: 20px;
+                    box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.2);
+                    border-radius: 30px;
+                }
 
                 &:hover{
 
@@ -118,36 +176,73 @@
 
                 img{
                     position: absolute;
-                    top: 30%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    height: 200px;
-                    min-width: 260px;
                     border-radius: 400px;
                     box-shadow: 0px 10px 28px rgba(102, 102, 102, 0.733);
                     transition: 0.4s ease;
+                    height: 200px;
+                    top: 30%;
+                    min-width: 260px;  
+
+                    @media(max-width: 380px)
+                        and (max-height: 584px) {
+                        height: 85px;
+                        box-shadow: 0px 10px 14px rgba(102, 102, 102, 0.733);
+                        min-width: 130px;
+                        top: 21%;
+                    }
+
+                    @media(max-width: 330px) {
+                        height: 85px;
+                        box-shadow: 0px 10px 14px rgba(102, 102, 102, 0.733);
+                        min-width: 130px;
+                        top: 21%;
+                    }
                 }
 
-                h4{
+                .product-name{
                     position: absolute;
-                    top: 80%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
                     font-size: 40px;
+                    top: 70%;
+                    transform: translate(-50%, -50%);
                     color: black;
                     transition: 0.4s ease;
                     text-shadow: 0 0 10px rgb(180, 180, 180);
+
+                    @media(max-width: 380px),
+                        screen and (max-height: 584px) {
+                        font-size: 25px;
+                        top: 54%;
+                    }
+
+                    @media(max-width: 330px) {
+                        font-size: 25px;
+                        top: 54%;
+                    }
                 }
 
                 h6{
                     position: absolute;
-                    top: 93%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 28px;
                     color: rgb(172, 33, 33);
                     transition: 0.4s ease;
                     text-shadow: 0 0 10px rgb(180, 180, 180);
+                    font-size: 28px;
+                    top: 93%;
+
+                    @media(max-width: 380px)
+                        and (max-height: 584px) {
+                        font-size: 14px;
+                        top: 84%;
+                    }
+
+                    @media(max-width: 330px) {
+                        font-size: 14px;
+                        top: 84%;
+                    }
                 }
             }
         }
