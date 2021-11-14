@@ -17,8 +17,11 @@ import { Validators } from '@angular/forms';
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
-    TranslateModule, Validators
+    TranslateModule 
   ],
-  declarations: [Tab3Page]
+  declarations: [
+    Tab3Page,
+    Validators
+  ]
 })
 export class Tab3PageModule {}

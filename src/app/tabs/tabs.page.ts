@@ -4,7 +4,6 @@ import { BehaviorSubject } from 'rxjs';
 import { AuthGuard } from '../guards/auth.guard';
 import { CartService } from '../services/cart.service';
 import { LanguageService } from '../services/language.service';
-import { Tab3Page } from '../tab3/tab3.page';
 
 @Component({
   selector: 'app-tabs',
@@ -32,7 +31,8 @@ export class TabsPage implements OnInit {
       this.router.url.includes('tab4') ||
       this.router.url.includes('tab3') ||
       this.router.url.includes('tab5') ||
-      this.router.url.includes('tab2')
+      this.router.url.includes('tab2') ||
+      this.router.url.includes('tab6')
       ? false
       : true);
   }

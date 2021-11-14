@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+  <div class="w-auto centering">
+    <ion-list>
+      <ion-item *ngFor="let product of products">
+        <div class="row">
+          <ion-label>{{product.name}}</ion-label>
+          <ion-label>{{product.amount}}</ion-label>
+        </div>
+      </ion-item>
+    </ion-list>
+    <h4>Totale: e qua ce metto er totale dal carrello</h4>
+    <form [formGroup]="deliveryForm" (ngSubmit)="onSubmit">
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+      <ion-label>Telefono</ion-label>
+      <ion-input type="text" formControlName="telephone"></ion-input>
+      <ion-label>Città</ion-label>
+      <ion-input type="text" formControlName="city"></ion-input>
+      <ion-label>Via</ion-label>
+      <ion-input type="text" formControlName="address"></ion-input>
+      <ion-label>Data della consegna</ion-label>
+      <ion-input type="date" formControlName="date"></ion-input>
+      <ion-label>Orario della consenga</ion-label>
+      <ion-input type="time" formControlName="clock"></ion-input>
+    </form>
+  </div>
+</ion-content>

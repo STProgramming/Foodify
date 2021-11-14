@@ -12,8 +12,8 @@ export class Tab3Page implements OnInit {
   logstatus: string; //stringa titolo
   isLogged = false;
   submitted = false;
-  correctUsername = 'administrator';
-  correctPassword = 'password';
+  correctUsername = 'administrator@foodify.com';
+  correctPassword = 'password1';
   incorrectUsername: boolean;
   incorrectPassword: boolean;
   statusUsername: number;
