@@ -1,0 +1,36 @@
+.bg{
+    background-color: rgb(126, 15, 15);
+}
+.rounded-layout{
+   border-radius: 30px;
+}
+
+.body{
+    background-color: #efefef;
+    min-height: 100vh;
+    border-radius: 30px;
+    overflow-y: visible;
+    padding-bottom: 20px;
+
+    #backpositioning{
+        width: 30px;
+        height: 30px;
+        padding: 50px 0 0 50px;
+    }
+    
+    .centering{
+        margin: 0 auto;
+
+        form {
+            padding: 30px 30px 0 30px;    
+    
+            .status-input{
+                border-bottom: 1px solid #d9d9d9;
+            }
+
+            #button-custom {
+                display: block;
+            }
+        }
+    }
+}

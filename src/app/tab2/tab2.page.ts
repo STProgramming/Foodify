@@ -33,7 +33,7 @@ export class Tab2Page implements OnInit {
     this.cartService.removeProduct(product);
   }
 
-  getTotal() {
+  public getTotal() {
     return this.cart.reduce((i, j) => i + j.price * j.amount, 0);
   }
 
@@ -43,6 +43,7 @@ export class Tab2Page implements OnInit {
 
   async checkOut(){
     const total = this.getTotal();
-    window.alert('il totale e\' di '+ total +' €');
+    await window.alert('il totale e\' di '+ total +' €');
+    this.router.navigateByUrl('tabs/tab6');
   }
 }

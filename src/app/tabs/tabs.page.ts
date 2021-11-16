@@ -18,10 +18,11 @@ export class TabsPage implements OnInit {
     private router: Router,
     private cartService: CartService,
     private languageService: LanguageService
-  ) {}
+  ) {
+    this.cartItemCount = this.cartService.getCartItemCount();
+  }
 
   ngOnInit() {
-    this.cartItemCount = this.cartService.getCartItemCount();
     this.auth = !!+localStorage.getItem('authenticated');
   }
 

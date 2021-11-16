@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicStorageModule } from '@ionic/storage';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function createTranslateLoader(http: HttpClient){
@@ -21,7 +22,7 @@ export function createTranslateLoader(http: HttpClient){
     provide: TranslateLoader,
     useFactory: (createTranslateLoader),
     deps: [HttpClient]
-  }})],
+  }}), NoopAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

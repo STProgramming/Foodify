@@ -1,29 +1,45 @@
 <ion-content [fullscreen]="true">
-  <div class="w-auto centering">
-    <ion-list>
-      <ion-item *ngFor="let product of products">
-        <div class="row">
-          <ion-label>{{product.name}}</ion-label>
-          <ion-label>{{product.amount}}</ion-label>
+  <div class="bg">
+    <div class="rounded-layout">
+      <div class="container">   
+        <div class="body">
+          <div class="row mb-5">
+            <div class="col-sm-4 col-4">
+              <ion-icon id="backpositioning" (click)="redirectToHome()" name="chevron-back-outline"></ion-icon>
+            </div>
+            <div class="col-sm-4 col-4">
+              <h6 class="text-center" style="padding-top: 50px; margin-top: 6px;"><b>Consegna a domicilio</b></h6>
+            </div>
+          </div>
+          <div class="col-11 centering">
+            <h3 class="text-center">Dove possiamo consegnare il tuo cibo?</h3>
+            <h4 class="text-center">Inserisci le informazioni sul punto di consegna del pacco Foodify</h4>
+            <form [formGroup]="deliveryForm" (ngSubmit)="onSubmit">
+              <ion-label>Nome</ion-label>
+              <ion-input class="status-input" type="text" formControlName="name"></ion-input>
+              <ion-label>Email</ion-label>
+              <ion-input class="status-input" type="text" formControlName="email"></ion-input>
+              <ion-label>Telefono</ion-label>
+              <ion-input class="status-input" type="text" formControlName="telephone"></ion-input>
+              <mat-form-field>
+                <input type="text" matInput/>
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let product of products" [value]="option">
+                    {{product.nome}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+              <ion-label>Via</ion-label>
+              <ion-input class="status-input" type="text" formControlName="address"></ion-input>
+              <ion-label>Data della consegna</ion-label>
+              <ion-input class="status-input" type="date" formControlName="date"></ion-input>
+              <ion-label>Orario della consenga</ion-label>
+              <ion-input class="status-input" type="time" formControlName="clock"></ion-input>
+              <div id="button-custom" type="submit" value="submit"><h2 class="text-center" style="color: white;">Registra</h2></div>
+            </form>
+          </div>     
         </div>
-      </ion-item>
-    </ion-list>
-    <h4>Totale: e qua ce metto er totale dal carrello</h4>
-    <form [formGroup]="deliveryForm" (ngSubmit)="onSubmit">
-      <ion-label>Nome</ion-label>
-      <ion-input type="text" formControlName="name"></ion-input>
-      <ion-label>Email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
-      <ion-label>Telefono</ion-label>
-      <ion-input type="text" formControlName="telephone"></ion-input>
-      <ion-label>Città</ion-label>
-      <ion-input type="text" formControlName="city"></ion-input>
-      <ion-label>Via</ion-label>
-      <ion-input type="text" formControlName="address"></ion-input>
-      <ion-label>Data della consegna</ion-label>
-      <ion-input type="date" formControlName="date"></ion-input>
-      <ion-label>Orario della consenga</ion-label>
-      <ion-input type="time" formControlName="clock"></ion-input>
-    </form>
+      </div>
+    </div>
   </div>
 </ion-content>
